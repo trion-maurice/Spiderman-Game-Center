@@ -1064,30 +1064,16 @@ body {
 }
 
 .map-container {
-  margin-top: 40px;
-}
-
-.map-placeholder {
-  background: rgba(13, 82, 156, 0.1);
-  border: 2px dashed var(--primary-blue);
   border-radius: var(--border-radius);
-  padding: 60px 20px;
-  text-align: center;
-  color: var(--primary-blue);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  height: 450px;
 }
 
-.map-placeholder i {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-
-.map-placeholder p {
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-
-.map-placeholder small {
-  color: #6b7280;
+.live-map {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .faq-section {
