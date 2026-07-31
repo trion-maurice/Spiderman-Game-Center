@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Spiderman Game Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="spiderman-parallax">
+      <img
+        src="https://images.unsplash.com/photo-1635805737707-575885ab0820?w=1920&h=1080&fit=crop"
+        alt="Spiderman"
+        class="parallax-img"
+      />
+    </div>
+
+    <nav class="glass-nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img
+            src="assets/spiderman-logo.jpg"
+            alt="Spiderman Game Center Logo"
+          />
+          <span>Spiderman Game Center</span>
+        </a>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="page-header">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-angle-right"></i>
+          <span>Contact</span>
+        </div>
+        <h1>Contact Us</h1>
+        <p>
+          Get in touch with us! We're here to answer any questions you may have.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-layout">
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <h2>Get In Touch</h2>
+            <p>
+              Have questions about our activities, pricing, or want to plan a
+              special event? We'd love to hear from you!
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="contact-text">
+                  <h3>Location</h3>
+                  <p>
+                    Spiderman Game Center<br />Masaka, Kicukiro<br />Kigali,
+                    Rwanda
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="contact-text">
+                  <h3>Phone Numbers</h3>
+                  <p>+250 78 XXX XXXX<br />+250 72 XXX XXXX</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact-text">
+                  <h3>Email Addresses</h3>
+                  <p>
+                    info@spidermangamecenter.com<br />booking@spidermangamecenter.com
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fa-regular fa-clock"></i>
+                </div>
+                <div class="contact-text">
+                  <h3>Opening Hours</h3>
+                  <p>
+                    Mon-Fri: 10:00 AM - 7:00 PM<br />Sat-Sun: 9:00 AM - 9:00
+                    PM<br />Holidays: 9:00 AM - 9:00 PM
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Map Placeholder -->
+            <div class="map-container">
+              <div class="map-placeholder">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <p>Interactive Map - Masaka, Kicukiro, Kigali</p>
+                <small>Location: Near Masaka Market, Kicukiro District</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-container">
+            <h2>Send Us a Message</h2>
+            <form class="contact-form" onsubmit="handleContact(event)">
+              <div class="form-group">
+                <label for="contactName"
+                  >Your Name <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="contactName"
+                  class="form-control"
+                  required
+                  placeholder="John Doe"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail"
+                  >Email Address <span class="required">*</span></label
+                >
+                <input
+                  type="email"
+                  id="contactEmail"
+                  class="form-control"
+                  required
+                  placeholder="john@example.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject"
+                  >Subject <span class="required">*</span></label
+                >
+                <select id="contactSubject" class="form-control" required>
+                  <option value="">Select a subject</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="booking">Booking Question</option>
+                  <option value="events">Special Events</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage"
+                  >Message <span class="required">*</span></label
+                >
+                <textarea
+                  id="contactMessage"
+                  class="form-control"
+                  rows="6"
+                  required
+                  placeholder="How can we help you?"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-large">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+              <h3>Frequently Asked Questions</h3>
+              <div class="faq-item">
+                <h4>Do I need to book in advance?</h4>
+                <p>
+                  Walk-ins are welcome, but we recommend booking in advance,
+                  especially on weekends and holidays.
+                </p>
+              </div>
+              <div class="faq-item">
+                <h4>What age groups do you cater to?</h4>
+                <p>
+                  We welcome children of all ages, from toddlers to teenagers.
+                  Different activities suit different age groups.
+                </p>
+              </div>
+              <div class="faq-item">
+                <h4>Is food available on-site?</h4>
+                <p>
+                  Yes! Our Kids Cafe offers healthy, delicious meals and snacks
+                  designed specifically for children.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>Spiderman Game Center</h4>
+            <p>
+              The ultimate destination for fun, games and adventure in Masaka,
+              Kigali!
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="activities.html">Activities</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Info</h4>
+            <ul>
+              <li>
+                <i class="fa-solid fa-location-dot"></i> Masaka, Kicukiro,
+                Kigali
+              </li>
+              <li><i class="fa-solid fa-phone"></i> +250 78 XXX XXXX</li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                info@spidermangamecenter.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 Spiderman Game Center. All rights reserved. |
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

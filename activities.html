@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activities | Spiderman Game Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="spiderman-parallax">
+      <img
+        src="https://images.unsplash.com/photo-1635805737707-575885ab0820?w=1920&h=1080&fit=crop"
+        alt="Spiderman"
+        class="parallax-img"
+      />
+    </div>
+
+    <nav class="glass-nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img
+            src="assets/spiderman-logo.jpg"
+            alt="Spiderman Game Center Logo"
+          />
+          <span>Spiderman Game Center</span>
+        </a>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="activities.html" class="active">Activities</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="page-header">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-angle-right"></i>
+          <span>Activities</span>
+        </div>
+        <h1>Fun Activities For Everyone</h1>
+        <p>
+          Discover a world of excitement and adventure with our range of
+          activities for children of all ages!
+        </p>
+      </div>
+    </section>
+
+    <section class="activities-detail">
+      <div class="container">
+        <!-- Video Games -->
+        <div class="activity-detail-card scroll-animate">
+          <div class="activity-image">
+            <img src="assets/playing-games.jpg" alt="Video Games" />
+            <span class="activity-tag">30 min sessions</span>
+          </div>
+          <div class="activity-content">
+            <div class="activity-icon-large">
+              <i class="fa-solid fa-gamepad"></i>
+            </div>
+            <h2>Video Games</h2>
+            <p>
+              Experience the latest and most exciting video games for children
+              of all ages. Our gaming station features both single-player and
+              multiplayer options, including popular titles that promote
+              teamwork, strategy, and hand-eye coordination.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <i class="fa-solid fa-check"></i> Latest gaming consoles
+                (PlayStation, Xbox, Nintendo Switch)
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Age-appropriate game selection
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Multiplayer tournaments and
+                competitions
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Educational and entertaining
+                games
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Comfortable gaming stations
+                with large screens
+              </li>
+            </ul>
+            <a href="booking.html" class="btn btn-primary">Try it!</a>
+          </div>
+        </div>
+
+        <!-- Swimming Pool -->
+        <div class="activity-detail-card reverse scroll-animate">
+          <div class="activity-image">
+            <img src="assets/swimming.jpg" alt="Swimming Pool" />
+            <span class="activity-tag">2 hour sessions</span>
+          </div>
+          <div class="activity-content">
+            <div class="activity-icon-large">
+              <i class="fa-solid fa-water"></i>
+            </div>
+            <h2>Swimming Pool</h2>
+            <p>
+              A safe, supervised swimming pool designed specifically for
+              children with shallow areas and fun water features. Our trained
+              lifeguards ensure a secure environment while kids enjoy splashing,
+              playing, and learning to swim.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <i class="fa-solid fa-check"></i> Certified lifeguards on duty
+                at all times
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Shallow areas for beginners
+                and toddlers
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Water slides and splash
+                features
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Swimming lessons available
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Clean, temperature-controlled
+                water
+              </li>
+            </ul>
+            <a href="booking.html" class="btn btn-primary">Try it!</a>
+          </div>
+        </div>
+
+        <!-- Toys & Games -->
+        <div class="activity-detail-card scroll-animate">
+          <div class="activity-image">
+            <img
+              src="https://images.unsplash.com/photo-1611371805429-8b5c1b2c34ba?w=600&h=400&fit=crop"
+              alt="Toys and Games"
+            />
+            <span class="activity-tag">Free play area</span>
+          </div>
+          <div class="activity-content">
+            <div class="activity-icon-large">
+              <i class="fa-solid fa-puzzle-piece"></i>
+            </div>
+            <h2>Toys & Games</h2>
+            <p>
+              A colorful area filled with educational toys, board games, and
+              interactive play sets to stimulate young minds. Our play area
+              encourages creativity, social interaction, and cognitive
+              development through play.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <i class="fa-solid fa-check"></i> Educational toys for all age
+                groups
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Classic and modern board games
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Building blocks and
+                construction sets
+              </li>
+              <li><i class="fa-solid fa-check"></i> Arts and crafts station</li>
+              <li>
+                <i class="fa-solid fa-check"></i> Soft play area for toddlers
+              </li>
+            </ul>
+            <a href="booking.html" class="btn btn-primary">Try it!</a>
+          </div>
+        </div>
+
+        <!-- Children's Shows -->
+        <div class="activity-detail-card reverse scroll-animate">
+          <div class="activity-image">
+            <img src="assets/kids-shows.jpg" alt="Children's Shows" />
+            <span class="activity-tag">Weekend shows</span>
+          </div>
+          <div class="activity-content">
+            <div class="activity-icon-large">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h2>Children's Shows</h2>
+            <p>
+              Regular performances including puppet shows, magic shows, and
+              interactive storytelling sessions. Our talented performers create
+              magical experiences that captivate young audiences and spark
+              imagination.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <i class="fa-solid fa-check"></i> Professional puppet shows
+                every weekend
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Magic shows with audience
+                participation
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Interactive storytelling
+                sessions
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Character appearances
+                (Spiderman & more)
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Music and dance performances
+              </li>
+            </ul>
+            <a href="booking.html" class="btn btn-primary">Try it!</a>
+          </div>
+        </div>
+
+        <!-- Special Events -->
+        <div class="activity-detail-card scroll-animate">
+          <div class="activity-image">
+            <video
+              loop
+              muted
+              autoplay
+              playsinline
+              src="assets/birthday-video.mp4"
+              alt="Special Events"
+            ></video>
+            <span class="activity-tag">Custom packages</span>
+          </div>
+          <div class="activity-content">
+            <div class="activity-icon-large">
+              <i class="fa-solid fa-cake-candles"></i>
+            </div>
+            <h2>Special Events</h2>
+            <p>
+              Host your child's birthday party or special occasion with custom
+              themes, decorations, and activities. We handle everything from
+              setup to cleanup, allowing parents to relax and enjoy the
+              celebration.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <i class="fa-solid fa-check"></i> Themed birthday parties
+                (Superhero, Princess, etc.)
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Custom decorations and setups
+              </li>
+              <li><i class="fa-solid fa-check"></i> Dedicated party hosts</li>
+              <li>
+                <i class="fa-solid fa-check"></i> Catering and cake options
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Party favors and souvenirs
+              </li>
+            </ul>
+            <a href="booking.html" class="btn btn-primary">Try it!</a>
+          </div>
+        </div>
+
+        <!-- Kids Cafe -->
+        <div class="activity-detail-card reverse scroll-animate">
+          <div class="activity-image">
+            <img src="assets/kids-cafe.jpg" alt="Kids Cafe" />
+            <span class="activity-tag">Kid-friendly menu</span>
+          </div>
+          <div class="activity-content">
+            <div class="activity-icon-large">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <h2>Kids Cafe</h2>
+            <p>
+              Healthy and delicious snacks and meals designed specifically for
+              children, with fun presentation. Our menu features nutritious
+              options that kids actually want to eat, prepared with fresh
+              ingredients.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <i class="fa-solid fa-check"></i> Healthy meal options (pizza,
+                pasta, sandwiches)
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Fresh fruit smoothies and
+                juices
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Fun-shaped snacks and treats
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Allergy-friendly options
+                available
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Colorful, child-friendly
+                presentation
+              </li>
+            </ul>
+            <a href="booking.html" class="btn btn-primary">Try it!</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>Spiderman Game Center</h4>
+            <p>
+              The ultimate destination for fun, games and adventure in Masaka,
+              Kigali!
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="activities.html">Activities</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Info</h4>
+            <ul>
+              <li>
+                <i class="fa-solid fa-location-dot"></i> Masaka, Kicukiro,
+                Kigali
+              </li>
+              <li><i class="fa-solid fa-phone"></i> +250 78 XXX XXXX</li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                info@spidermangamecenter.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Spiderman Game Center. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

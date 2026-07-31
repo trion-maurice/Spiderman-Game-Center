@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Spiderman Game Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="spiderman-parallax">
+      <img
+        src="https://images.unsplash.com/photo-1635805737707-575885ab0820?w=1920&h=1080&fit=crop"
+        alt="Spiderman"
+        class="parallax-img"
+      />
+    </div>
+
+    <nav class="glass-nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img
+            src="assets/spiderman-logo.jpg"
+            alt="Spiderman Game Center Logo"
+          />
+          <span>Spiderman Game Center</span>
+        </a>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="page-header">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-angle-right"></i>
+          <span>Gallery</span>
+        </div>
+        <h1>Our Gallery</h1>
+        <p>
+          Take a peek at the fun and excitement that awaits you at Spiderman
+          Game Center!
+        </p>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-filters">
+          <button class="filter-btn active" onclick="filterGallery('all')">
+            All
+          </button>
+          <button class="filter-btn" onclick="filterGallery('games')">
+            Games
+          </button>
+          <button class="filter-btn" onclick="filterGallery('pool')">
+            Swimming Pool
+          </button>
+          <button class="filter-btn" onclick="filterGallery('events')">
+            Events
+          </button>
+          <button class="filter-btn" onclick="filterGallery('shows')">
+            Shows
+          </button>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item" data-category="games">
+            <img
+              src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=300&fit=crop"
+              alt="Children playing video games"
+            />
+            <div class="gallery-overlay">
+              <h3>Video Gaming Zone</h3>
+              <p>Children playing video games</p>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="pool">
+            <img
+              src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=400&h=300&fit=crop"
+              alt="Kids enjoying the swimming pool"
+            />
+            <div class="gallery-overlay">
+              <h3>Swimming Fun</h3>
+              <p>Kids enjoying the swimming pool</p>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="events">
+            <img
+              src="https://images.unsplash.com/photo-1530103862676-de3c9a59aa38?w=400&h=300&fit=crop"
+              alt="Birthday celebration"
+            />
+            <div class="gallery-overlay">
+              <h3>Birthday Party</h3>
+              <p>Birthday celebration</p>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="shows">
+            <img
+              src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=400&h=300&fit=crop"
+              alt="Spider-Man character show"
+            />
+            <div class="gallery-overlay">
+              <h3>Spiderman Show</h3>
+              <p>Spider-Man character show</p>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="games">
+            <img
+              src="https://images.unsplash.com/photo-1611371805429-8b5c1b2c34ba?w=400&h=300&fit=crop"
+              alt="Board games area"
+            />
+            <div class="gallery-overlay">
+              <h3>Board Games Corner</h3>
+              <p>Board games area</p>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="events">
+            <img
+              src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=400&h=300&fit=crop"
+              alt="Special holiday event"
+            />
+            <div class="gallery-overlay">
+              <h3>Holiday Celebration</h3>
+              <p>Special holiday event</p>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="games">
+            <img
+              src="https://images.unsplash.com/photo-1493711662062-fa541f7f3d24?w=400&h=300&fit=crop"
+              alt="Gaming tournament"
+            />
+            <div class="gallery-overlay">
+              <h3>Gaming Tournament</h3>
+              <p>Multiplayer gaming competition</p>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="pool">
+            <img
+              src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=400&h=300&fit=crop"
+              alt="Pool party"
+            />
+            <div class="gallery-overlay">
+              <h3>Pool Party</h3>
+              <p>Fun water activities</p>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="shows">
+            <img
+              src="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=400&h=300&fit=crop"
+              alt="Magic show"
+            />
+            <div class="gallery-overlay">
+              <h3>Magic Show</h3>
+              <p>Interactive magic performance</p>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="events">
+            <img
+              src="https://images.unsplash.com/photo-1530103862676-de3c9a59aa38?w=400&h=300&fit=crop"
+              alt="Group celebration"
+            />
+            <div class="gallery-overlay">
+              <h3>Group Event</h3>
+              <p>Special group celebration</p>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="games">
+            <img
+              src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=300&fit=crop"
+              alt="Retro gaming"
+            />
+            <div class="gallery-overlay">
+              <h3>Retro Gaming</h3>
+              <p>Classic arcade games</p>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="pool">
+            <img
+              src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=400&h=300&fit=crop"
+              alt="Water slide"
+            />
+            <div class="gallery-overlay">
+              <h3>Water Slide</h3>
+              <p>Exciting water features</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>Spiderman Game Center</h4>
+            <p>
+              The ultimate destination for fun, games and adventure in Masaka,
+              Kigali!
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="activities.html">Activities</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Info</h4>
+            <ul>
+              <li>
+                <i class="fa-solid fa-location-dot"></i> Masaka, Kicukiro,
+                Kigali
+              </li>
+              <li><i class="fa-solid fa-phone"></i> +250 78 XXX XXXX</li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                info@spidermangamecenter.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Spiderman Game Center. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

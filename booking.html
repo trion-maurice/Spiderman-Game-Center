@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Now | Spiderman Game Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="spiderman-parallax">
+      <img
+        src="https://images.unsplash.com/photo-1635805737707-575885ab0820?w=1920&h=1080&fit=crop"
+        alt="Spiderman"
+        class="parallax-img"
+      />
+    </div>
+
+    <nav class="glass-nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img
+            src="assets/spiderman-logo.jpg"
+            alt="Spiderman Game Center Logo"
+          />
+          <span>Spiderman Game Center</span>
+        </a>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="booking.html" class="active">Book Now</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="page-header">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-angle-right"></i>
+          <span>Book Now</span>
+        </div>
+        <h1>Book Your Adventure</h1>
+        <p>
+          Reserve your spot for guaranteed fun! Book now for standard visits or
+          special events.
+        </p>
+      </div>
+    </section>
+
+    <section class="booking-section">
+      <div class="container">
+        <div class="booking-layout">
+          <!-- Reservation Form -->
+          <div class="booking-form-container">
+            <h2>Reservation Form</h2>
+            <form class="booking-form" onsubmit="handleBooking(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="parentName"
+                    >Parent/Guardian Name <span class="required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="parentName"
+                    class="form-control"
+                    required
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone"
+                    >Phone Number <span class="required">*</span></label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="form-control"
+                    required
+                    placeholder="+250 78X XXX XXX"
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email"
+                    >Email Address <span class="required">*</span></label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    required
+                    placeholder="john@example.com"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="children"
+                    >Number of Children <span class="required">*</span></label
+                  >
+                  <input
+                    type="number"
+                    id="children"
+                    class="form-control"
+                    min="1"
+                    value="1"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="date"
+                    >Visit Date <span class="required">*</span></label
+                  >
+                  <input type="date" id="date" class="form-control" required />
+                </div>
+                <div class="form-group">
+                  <label for="time"
+                    >Preferred Time <span class="required">*</span></label
+                  >
+                  <select id="time" class="form-control" required>
+                    <option value="">Select Time</option>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="12:00 PM">12:00 PM</option>
+                    <option value="2:00 PM">2:00 PM</option>
+                    <option value="4:00 PM">4:00 PM</option>
+                    <option value="6:00 PM">6:00 PM</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="package"
+                  >Package <span class="required">*</span></label
+                >
+                <select id="package" class="form-control" required>
+                  <option value="">Select Package</option>
+                  <option value="Standard Pass">
+                    Standard Pass - 5,000 RWF
+                  </option>
+                  <option value="Premium Pass">Premium Pass - 8,000 RWF</option>
+                  <option value="Party Package">
+                    Party Package - 50,000 RWF
+                  </option>
+                  <option value="Custom Event">Custom Event</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="requests">Special Requests</label>
+                <textarea
+                  id="requests"
+                  class="form-control"
+                  rows="4"
+                  placeholder="Any allergies, special themes, dietary requirements, or other requests..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-large">
+                <i class="fa-solid fa-calendar-check"></i> Confirm Reservation
+              </button>
+            </form>
+          </div>
+
+          <!-- Policies & Guidelines -->
+          <div class="booking-info">
+            <div class="policy-box">
+              <h3>
+                <i class="fa-solid fa-clipboard-check"></i> Reservation Policy
+              </h3>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i> Booking recommended
+                  on weekends and holidays
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i> Party packages
+                  require at least 3 days advance booking
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i> 50% deposit required
+                  for party bookings
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i> Cancellations must be
+                  made 24 hours in advance
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i> Full payment required
+                  for standard passes
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i> Confirmation email
+                  sent within 24 hours
+                </li>
+              </ul>
+            </div>
+
+            <div class="policy-box">
+              <h3><i class="fa-solid fa-suitcase"></i> What to Bring</h3>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-shirt"></i> Swimming costume and towel
+                  for pool activities
+                </li>
+                <li>
+                  <i class="fa-solid fa-person-running"></i> Comfortable clothes
+                  and socks for play areas
+                </li>
+                <li>
+                  <i class="fa-solid fa-utensils"></i> Information about special
+                  dietary requirements
+                </li>
+                <li>
+                  <i class="fa-solid fa-sun"></i> Sunscreen for outdoor
+                  activities
+                </li>
+                <li>
+                  <i class="fa-solid fa-bottle-water"></i> Water bottle (refill
+                  stations available)
+                </li>
+                <li>
+                  <i class="fa-solid fa-id-card"></i> Valid ID for check-in (for
+                  adults)
+                </li>
+              </ul>
+            </div>
+
+            <div class="policy-box">
+              <h3>
+                <i class="fa-solid fa-shield-halved"></i> Safety Guidelines
+              </h3>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-user-shield"></i> Children must be
+                  supervised by adults at all times
+                </li>
+                <li>
+                  <i class="fa-solid fa-person-swimming"></i> Pool area requires
+                  adult supervision for children under 8
+                </li>
+                <li>
+                  <i class="fa-solid fa-heart-pulse"></i> First aid station
+                  available on-site
+                </li>
+                <li>
+                  <i class="fa-solid fa-hand-holding-heart"></i> All staff
+                  trained in child safety protocols
+                </li>
+              </ul>
+            </div>
+
+            <div class="contact-quick">
+              <h3>Need Help Booking?</h3>
+              <p>Call us directly for assistance:</p>
+              <a href="tel:+25078XXXXXXX" class="phone-link">
+                <i class="fa-solid fa-phone"></i> +250 78 XXX XXXX
+              </a>
+              <a
+                href="mailto:booking@spidermangamecenter.com"
+                class="email-link"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                booking@spidermangamecenter.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>Spiderman Game Center</h4>
+            <p>
+              The ultimate destination for fun, games and adventure in Masaka,
+              Kigali!
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="activities.html">Activities</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Info</h4>
+            <ul>
+              <li>
+                <i class="fa-solid fa-location-dot"></i> Masaka, Kicukiro,
+                Kigali
+              </li>
+              <li><i class="fa-solid fa-phone"></i> +250 78 XXX XXXX</li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                info@spidermangamecenter.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Spiderman Game Center. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
