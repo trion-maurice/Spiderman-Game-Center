@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant - Coming Soon | Spiderman Game Center</title>
+    <title>Restaurant | Spiderman Game Center</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -41,6 +41,9 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="activities.html">Activities</a></li>
           <li><a href="restaurant.html" class="active">Restaurant</a></li>
+          <li><a href="bakery.html">Bakery</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="apartments.html">Apartments</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="booking.html">Book Now</a></li>
@@ -56,45 +59,96 @@
           <i class="fa-solid fa-angle-right"></i>
           <span>Restaurant</span>
         </div>
-        <h1>Our Restaurant is Coming Soon!</h1>
+        <h1>Fuel the Fun at Our Restaurant</h1>
         <p>
-          Get ready for a delicious experience. We're working on bringing our
-          full menu online.
+          Fresh family favourites, kids' meals and refreshments for every
+          adventure.
         </p>
       </div>
     </section>
 
-    <section class="coming-soon-page">
+    <main class="food-carousel-wrapper" id="menu">
       <div class="container">
-        <div class="section-header">
-          <h2>What to Expect</h2>
+        <div class="menu-intro">
+          <span class="menu-kicker">Eat &middot; Drink &middot; Play</span>
+          <h2>Pick Your Power-Up</h2>
           <p>
-            Once launched, you'll be able to enjoy these exciting features
-            directly from our website.
+            Explore the full Spiderman Game Center menu, from Nyamachoma
+            favourites to cool drinks and sweet treats.
           </p>
         </div>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fa-solid fa-utensils"></i></div>
-            <h3>Interactive Menu</h3>
-            <p>
-              Browse our full menu with high-quality images, detailed
-              descriptions, and transparent pricing.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fa-brands fa-whatsapp"></i>
-            </div>
-            <h3>Direct WhatsApp Ordering</h3>
-            <p>
-              Each menu item will have an "Order Now" button to send your order
-              directly to us for quick confirmation.
-            </p>
+        <div class="menu-toolbar">
+          <div
+            class="menu-categories"
+            id="menuCategories"
+            aria-label="Menu categories"
+          ></div>
+          <div class="menu-count" aria-live="polite">
+            <strong id="menuCount">0</strong> dishes
           </div>
         </div>
+        <section class="menu-stage" aria-label="Featured menu carousel">
+          <div class="menu-backdrop" id="menuBackdrop" aria-hidden="true"></div>
+          <button
+            class="carousel-arrow carousel-prev"
+            type="button"
+            aria-label="Previous dish"
+          >
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <div class="carousel-track" id="foodCarousel" tabindex="0"></div>
+          <button
+            class="carousel-arrow carousel-next"
+            type="button"
+            aria-label="Next dish"
+          >
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="carousel-caption" aria-live="polite">
+            <span class="caption-category" id="menuItemCategory"></span>
+            <h3 id="menuItemName">Loading the menu...</h3>
+            <p id="menuItemDescription"></p>
+            <div class="caption-footer">
+              <strong id="menuItemPrice"></strong>
+              <button class="menu-add-button" type="button" id="menuAddButton">
+                <i class="fa-solid fa-plus"></i> Add to tray
+              </button>
+            </div>
+          </div>
+        </section>
+        <div
+          class="carousel-dots"
+          id="carouselDots"
+          aria-label="Choose a menu item"
+        ></div>
+        <aside class="menu-tray" aria-live="polite">
+          <button
+            class="tray-toggle"
+            id="trayToggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="trayDetails"
+          >
+            <span class="tray-label"
+              ><i class="fa-solid fa-basket-shopping"></i> Your tray</span
+            >
+            <span class="tray-summary"
+              ><strong id="trayCount">0 items</strong
+              ><strong id="trayTotal">0 FRW</strong
+              ><i class="fa-solid fa-chevron-down tray-chevron"></i
+            ></span>
+          </button>
+          <div class="tray-details" id="trayDetails" hidden>
+            <div class="tray-items" id="trayItems">
+              <p class="tray-empty">Your tray is empty.</p>
+            </div>
+            <button class="tray-clear" id="trayClear" type="button">
+              Clear tray
+            </button>
+          </div>
+        </aside>
       </div>
-    </section>
+    </main>
 
     <footer class="main-footer">
       <div class="container">
@@ -108,7 +162,9 @@
             <div class="social-links">
               <a href="#"><i class="fa-brands fa-facebook"></i></a>
               <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://wa.me/250788000000"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="https://wa.me/250788000000"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
               <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
           </div>
