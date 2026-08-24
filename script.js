@@ -240,6 +240,41 @@ document.addEventListener('DOMContentLoaded', () => {
         ['Bavaria Non Alc', 'Soft Drinks', '4,000 FRW', 'Freshly prepared at Spiderman Game Center.']
     ].map(([name, category, price, description]) => ({ name, category, price, description }));
 
+    const bakeryItems = [
+        ['Celebration Chocolate Cake', 'Celebration Cakes', '25,000 FRW', 'Rich chocolate sponge with smooth ganache, made for memorable birthdays.'],
+        ['Vanilla Birthday Cake', 'Celebration Cakes', '22,000 FRW', 'Light vanilla sponge with a creamy finish and colourful sprinkles.'],
+        ['Red Velvet Cake', 'Celebration Cakes', '28,000 FRW', 'Soft red velvet layers with a classic cream cheese frosting.'],
+        ['Fresh Fruit Cake', 'Celebration Cakes', '30,000 FRW', 'Vanilla cake topped with seasonal fruit and a gentle cream glaze.'],
+        ['Chocolate Cupcake', 'Cupcakes', '2,500 FRW', 'Moist chocolate cupcake finished with a swirl of chocolate buttercream.'],
+        ['Vanilla Cupcake', 'Cupcakes', '2,000 FRW', 'Soft vanilla sponge with a sweet, playful frosting finish.'],
+        ['Red Velvet Cupcake', 'Cupcakes', '2,500 FRW', 'A small red velvet treat with smooth cream cheese frosting.'],
+        ['Sprinkle Party Cupcake', 'Cupcakes', '2,500 FRW', 'A bright celebration cupcake made for little hands and big smiles.'],
+        ['Butter Croissant', 'Pastries', '2,500 FRW', 'Golden, flaky layers baked fresh for a buttery morning bite.'],
+        ['Chocolate Croissant', 'Pastries', '3,000 FRW', 'Flaky pastry wrapped around a warm chocolate centre.'],
+        ['Cinnamon Roll', 'Pastries', '3,000 FRW', 'Soft rolled pastry with cinnamon sugar and a light glaze.'],
+        ['Blueberry Muffin', 'Pastries', '3,000 FRW', 'Tender muffin packed with blueberry sweetness.'],
+        ['Chocolate Chip Cookie', 'Cookies', '1,500 FRW', 'Golden-baked cookie with generous chocolate chips.'],
+        ['Oatmeal Raisin Cookie', 'Cookies', '1,500 FRW', 'A chewy oat cookie with juicy raisins and warm spice.'],
+        ['Double Chocolate Cookie', 'Cookies', '2,000 FRW', 'Rich cocoa cookie with extra chocolate chunks.'],
+        ['Jam Doughnut', 'Doughnuts', '2,000 FRW', 'Soft doughnut filled with bright strawberry jam and dusted with sugar.'],
+        ['Chocolate Doughnut', 'Doughnuts', '2,500 FRW', 'Fluffy doughnut with chocolate glaze and a playful topping.'],
+        ['Glazed Doughnut', 'Doughnuts', '2,000 FRW', 'Freshly baked doughnut with a smooth sweet glaze.'],
+        ['Banana Bread Slice', 'Slices & Loaves', '2,500 FRW', 'Moist banana bread, perfect for a quick snack between games.'],
+        ['Carrot Cake Slice', 'Slices & Loaves', '3,000 FRW', 'Spiced carrot cake slice with a creamy topping.'],
+        ['Brownie Slice', 'Slices & Loaves', '3,000 FRW', 'Fudgy chocolate brownie with a rich, tender centre.'],
+        ['Lemon Loaf Slice', 'Slices & Loaves', '2,500 FRW', 'Bright lemon loaf with a delicate citrus glaze.'],
+        ['Fruit Tart', 'Tarts & Treats', '4,000 FRW', 'Crisp pastry filled with cream and finished with fresh fruit.'],
+        ['Chocolate Tart', 'Tarts & Treats', '4,000 FRW', 'Silky chocolate filling in a crisp, buttery tart shell.'],
+        ['Mini Cheesecake', 'Tarts & Treats', '4,000 FRW', 'Creamy baked cheesecake in a perfectly snackable size.'],
+        ['Cake Pop', 'Kids Treats', '2,000 FRW', 'A fun bite-sized cake treat dipped in colourful chocolate.'],
+        ['Marshmallow Rice Treat', 'Kids Treats', '1,500 FRW', 'Crispy rice and soft marshmallow in a playful square.'],
+        ['Party Treat Box', 'Kids Treats', '12,000 FRW', 'A sharing box of mini cupcakes, cookies and doughnut bites.'],
+        ['Hot Chocolate', 'Bakery Drinks', '3,500 FRW', 'Warm chocolate drink topped with a soft, sweet finish.'],
+        ['Chai Latte', 'Bakery Drinks', '3,500 FRW', 'Spiced tea latte made for pairing with a fresh pastry.'],
+        ['Iced Chocolate', 'Bakery Drinks', '4,000 FRW', 'Cool chocolate drink with a creamy, indulgent finish.'],
+        ['Fresh Lemonade', 'Bakery Drinks', '3,000 FRW', 'Bright, refreshing lemonade to balance a sweet treat.']
+    ].map(([name, category, price, description]) => ({ name, category, price, description }));
+
     const imageByCategory = {
         Specials: 'photo-1544025162-d76694265947', Grilled: 'photo-1558030006-450675393462', Brochettes: 'photo-1529193591184-b1d58069ecdd',
         Sizzling: 'photo-1515003197210-e0cd71810b5f', Soup: 'photo-1547592180-85f173990554', Pizza: 'photo-1574071318508-1cdbab80d002',
@@ -247,7 +282,10 @@ document.addEventListener('DOMContentLoaded', () => {
         'Cold Starter': 'photo-1540420773420-3366772f4999', 'Meat with Chips': 'photo-1527477396000-e27163b481c2', 'Side Dishes': 'photo-1512621776951-a57141f2eefd',
         Dessert: 'photo-1551024506-0bccd828d307', 'Fresh Drinks': 'photo-1544145945-f90425340c7e', 'Virgin Mojito': 'photo-1551024709-8f23befc6f87',
         'Hot/Cold Tea': 'photo-1544787219-7f47ccb76574', 'Coffee (Hot)': 'photo-1495474472287-4d71bcdd2085', 'Cold Coffee': 'photo-1461023058943-07fcbe16d735',
-        'Soft Drinks': 'photo-1523362628745-0c100150b504'
+        'Soft Drinks': 'photo-1523362628745-0c100150b504', 'Celebration Cakes': 'photo-1578985545062-69928b1d9587',
+        Cupcakes: 'photo-1519869325930-281384150729', Pastries: 'photo-1555507036-ab1f4038808a', Cookies: 'photo-1499636136210-6f4ee915583e',
+        Doughnuts: 'photo-1551024506-0bccd828d307', 'Slices & Loaves': 'photo-1606313564200-e75d5e30476c', 'Tarts & Treats': 'photo-1464305795204-6f5bbfc7fb81',
+        'Kids Treats': 'photo-1575377427642-087cf684f04d', 'Bakery Drinks': 'photo-1544145945-f90425340c7e'
     };
     const foodImageVariants = [
         'photo-1546069901-ba9599a7e63c', 'photo-1540189549336-e6e99c3679fe',
@@ -259,7 +297,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (index % 3 === 0) return imageByCategory[menuItem.category] || imageByCategory.Specials;
         return foodImageVariants[index % foodImageVariants.length];
     }
-    const categories = ['All', ...new Set(menuItems.map(item => item.category))];
+    const catalog = document.querySelector('.bakery-menu') ? bakeryItems : menuItems;
+    const categories = ['All', ...new Set(catalog.map(item => item.category))];
     const categoryWrap = document.getElementById('menuCategories');
     const dotsWrap = document.getElementById('carouselDots');
     const nameEl = document.getElementById('menuItemName');
@@ -274,7 +313,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const trayEl = document.querySelector('.menu-tray');
     const trayToggle = document.getElementById('trayToggle');
     const trayDetails = document.getElementById('trayDetails');
-    let filteredItems = menuItems;
+    const stage = document.querySelector('.menu-stage');
+    const dots = document.getElementById('carouselDots');
+    const toolbar = document.querySelector('.menu-toolbar');
+    const viewAllButton = document.createElement('button');
+    const allItemsGrid = document.createElement('section');
+    viewAllButton.type = 'button';
+    viewAllButton.className = 'menu-view-all-button';
+    viewAllButton.innerHTML = '<i class="fa-solid fa-table-cells-large"></i> View all items';
+    viewAllButton.setAttribute('aria-expanded', 'false');
+    viewAllButton.setAttribute('aria-controls', 'allMenuItems');
+    toolbar.appendChild(viewAllButton);
+    allItemsGrid.id = 'allMenuItems';
+    allItemsGrid.className = 'all-menu-items';
+    allItemsGrid.hidden = true;
+    stage.parentNode.insertBefore(allItemsGrid, stage);
+    let filteredItems = catalog;
     let activeIndex = 0;
     let tray = [];
     let autoplay;
@@ -284,12 +338,51 @@ document.addEventListener('DOMContentLoaded', () => {
         button.type = 'button'; button.className = 'menu-category-button'; button.textContent = category;
         button.classList.toggle('active', category === 'All');
         button.addEventListener('click', () => {
+            if (!allItemsGrid.hidden) toggleAllItems();
             document.querySelectorAll('.menu-category-button').forEach(item => item.classList.remove('active'));
-            button.classList.add('active'); filteredItems = category === 'All' ? menuItems : menuItems.filter(item => item.category === category);
+            button.classList.add('active'); filteredItems = category === 'All' ? catalog : catalog.filter(item => item.category === category);
             activeIndex = 0; render(); restartAutoplay();
         });
         categoryWrap.appendChild(button);
     });
+
+    function renderAllItems() {
+        allItemsGrid.innerHTML = '';
+        catalog.forEach((menuItem, index) => {
+            const card = document.createElement('article');
+            card.className = 'all-menu-item';
+            const imageId = getImageId(menuItem, index);
+            card.innerHTML = `<img src="https://images.unsplash.com/${imageId}?auto=format&fit=crop&w=500&q=80" alt="${menuItem.name}" loading="lazy"><div class="all-menu-item-content"><span>${menuItem.category}</span><h3>${menuItem.name}</h3><p>${menuItem.description}</p><strong>${menuItem.price}</strong><button type="button" class="all-menu-add"><i class="fa-solid fa-plus"></i> Add</button></div>`;
+            card.querySelector('.all-menu-add').addEventListener('click', () => {
+                tray.push(menuItem);
+                updateTray();
+                if (trayDetails.hidden) {
+                    trayDetails.hidden = false;
+                    trayToggle.setAttribute('aria-expanded', 'true');
+                    trayEl.classList.add('is-open');
+                }
+            });
+            allItemsGrid.appendChild(card);
+        });
+    }
+
+    function toggleAllItems() {
+        const showAll = allItemsGrid.hidden;
+        allItemsGrid.hidden = !showAll;
+        stage.hidden = showAll;
+        dots.hidden = showAll;
+        viewAllButton.setAttribute('aria-expanded', String(showAll));
+        viewAllButton.innerHTML = showAll ? '<i class="fa-solid fa-arrow-left"></i> Back to carousel' : '<i class="fa-solid fa-table-cells-large"></i> View all items';
+        if (showAll) {
+            clearInterval(autoplay);
+            countEl.textContent = catalog.length;
+            renderAllItems();
+        } else {
+            restartAutoplay();
+        }
+    }
+
+    viewAllButton.addEventListener('click', toggleAllItems);
 
     function render() {
         countEl.textContent = filteredItems.length;
@@ -378,7 +471,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.key === 'ArrowRight') { move(1); restartAutoplay(); }
         if (event.key === 'Enter' || event.key === ' ') { document.getElementById('menuAddButton').click(); event.preventDefault(); }
     });
-    const stage = document.querySelector('.menu-stage');
     stage.addEventListener('mouseenter', () => clearInterval(autoplay)); stage.addEventListener('mouseleave', restartAutoplay);
     stage.addEventListener('focusin', () => clearInterval(autoplay)); stage.addEventListener('focusout', restartAutoplay);
     render(); restartAutoplay();
