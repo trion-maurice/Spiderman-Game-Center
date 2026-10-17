@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apartments | Spiderman Game Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="spiderman-parallax">
+      <img
+        src="https://images.unsplash.com/photo-1635805737707-575885ab0820?w=1920&h=1080&fit=crop"
+        alt="Spiderman"
+        class="parallax-img"
+      />
+    </div>
+    <nav class="glass-nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo"
+          ><img
+            src="assets/spiderman-logo.jpg"
+            alt="Spiderman Game Center Logo"
+          /><span>Spiderman Game Center</span></a
+        >
+        <button class="mobile-menu-btn" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="restaurant.html">Restaurant</a></li>
+          <li><a href="bakery.html">Bakery</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="apartments.html" class="active">Apartments</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="page-header">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a><i class="fa-solid fa-angle-right"></i
+          ><span>Apartments</span>
+        </div>
+        <h1>Stay Close to the Fun</h1>
+        <p>
+          Comfortable apartments in Masaka, Kigali for families, visitors and
+          longer stays.
+        </p>
+      </div>
+    </section>
+    <main class="apartments-page">
+      <div class="container">
+        <section class="apartment-hero">
+          <div class="apartment-hero-copy">
+            <span class="apartment-eyebrow"
+              >Stay &middot; Play &middot; Unwind</span
+            >
+            <h2>Your basecamp for Kigali adventures.</h2>
+            <p>
+              Settle into a calm, comfortable space with the Game Center right
+              downstairs and Masaka within easy reach.
+            </p>
+            <div class="apartment-hero-actions">
+              <a href="booking.html" class="btn btn-primary"
+                ><i class="fa-solid fa-calendar-check"></i> Check
+                availability</a
+              ><a href="contact.html" class="apartment-text-link"
+                >Ask a question <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="apartment-hero-media">
+            <img
+              src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=85"
+              alt="Bright modern apartment living room"
+            /><span class="apartment-location"
+              ><i class="fa-solid fa-location-dot"></i> Masaka, Kicukiro</span
+            >
+          </div>
+        </section>
+        <section class="apartment-stats" aria-label="Apartment highlights">
+          <div><strong>24/7</strong><span>Easy access</span></div>
+          <div><strong>Family</strong><span>Friendly spaces</span></div>
+          <div><strong>1 stop</strong><span>From games to rest</span></div>
+          <div><strong>Daily</strong><span>Local support</span></div>
+        </section>
+        <section class="apartment-section">
+          <div class="apartment-section-heading">
+            <div>
+              <span class="apartment-eyebrow">Find your fit</span>
+              <h2>Spaces made for switching off.</h2>
+            </div>
+            <p>
+              Choose a stay that gives your group enough room to recharge after
+              a full day of play.
+            </p>
+          </div>
+          <div class="apartment-options">
+            <article class="apartment-option">
+              <div class="apartment-option-image">
+                <img
+                  src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=85"
+                  alt="Comfortable apartment bedroom"
+                /><span>Most requested</span>
+              </div>
+              <div class="apartment-option-body">
+                <div>
+                  <span class="apartment-type">The Family Base</span>
+                  <h3>One-bedroom apartment</h3>
+                </div>
+                <p>
+                  A practical home for parents and children, with a relaxed
+                  living area and room to settle in.
+                </p>
+                <ul>
+                  <li><i class="fa-solid fa-bed"></i> Sleeps up to 4</li>
+                  <li><i class="fa-solid fa-wifi"></i> Wi-Fi included</li>
+                  <li><i class="fa-solid fa-kitchen-set"></i> Kitchenette</li>
+                </ul>
+                <a href="booking.html" class="apartment-card-link"
+                  >Enquire about this stay
+                  <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+            <article class="apartment-option">
+              <div class="apartment-option-image">
+                <img
+                  src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=900&q=85"
+                  alt="Calm apartment interior"
+                /><span class="quiet-tag">Long-stay ready</span>
+              </div>
+              <div class="apartment-option-body">
+                <div>
+                  <span class="apartment-type">The Long Weekend</span>
+                  <h3>Spacious family suite</h3>
+                </div>
+                <p>
+                  More breathing room for longer visits, family gatherings and
+                  guests who want to stay near the action.
+                </p>
+                <ul>
+                  <li><i class="fa-solid fa-bed"></i> Sleeps up to 6</li>
+                  <li><i class="fa-solid fa-couch"></i> Separate lounge</li>
+                  <li>
+                    <i class="fa-solid fa-square-parking"></i> Easy parking
+                  </li>
+                </ul>
+                <a href="booking.html" class="apartment-card-link"
+                  >Enquire about this stay
+                  <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="apartment-amenities">
+          <div>
+            <span class="apartment-eyebrow">Everything nearby</span>
+            <h2>More time for the good stuff.</h2>
+          </div>
+          <div class="amenity-list">
+            <span><i class="fa-solid fa-gamepad"></i> Game Center access</span
+            ><span
+              ><i class="fa-solid fa-utensils"></i> Restaurant & bakery</span
+            ><span
+              ><i class="fa-solid fa-shield-heart"></i> Family-first
+              support</span
+            ><span
+              ><i class="fa-solid fa-map-location-dot"></i> Explore Kigali</span
+            >
+          </div>
+        </section>
+        <section class="apartment-cta">
+          <div>
+            <span class="apartment-eyebrow">Make it a staycation</span>
+            <h2>Wake up close to the next adventure.</h2>
+            <p>
+              Tell us your dates and group size. We will help you find the right
+              apartment.
+            </p>
+          </div>
+          <a href="booking.html" class="btn btn-primary"
+            >Start a booking <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </section>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>&copy; 2026 Spiderman Game Center. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
